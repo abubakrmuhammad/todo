@@ -1,101 +1,155 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
     <title>To-Do List</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="./style.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div class="container">
-        <h1 class="heading py-1 my-2">
-            Create a Task
-        </h1>
+      <h1 class="heading py-1 my-2">Create a Task</h1>
       <form class="form inputfield">
-          <div class="form-group">
-              <label for="date">Date:</label>
-<input type="date" id="date" name="date" placeholder="Enter Date" size="70px">
-            </div> 
+        <div class="form-group">
+          <label for="date">Date:</label>
+          <input
+            type="date"
+            id="date"
+            name="date"
+            placeholder="Enter Date"
+            size="70px"
+          />
+        </div>
 
-
-          <div class="form-group">
-              <label for="Title" id="title-label">Title :</label>
-              <input type="text" class="title" id="title" placeholder="Enter title"size="70px" name="title"   required>
-            </div> 
-            <div class="form-group" >
-              <div class="form-check-inline">
-                  <label for="Priority" class="priority-label">Priroty :&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                  <label class="form-check-label" for="checkbox">
-                    <input type="checkbox" class="priorityhigh" id="priorityhigh" name="high" >High
-                  </label>
-                </div>
-                <div class="form-check-inline">
-                  <label class="form-check-label">
-                    <input type="checkbox" class="prioritylow"  id="prioritylow" name="Low">Low
-                  </label>
-                </div>
-            </div>
-            <div class="form-group" >
-              <div class="form-check-inline">
-                  <label for="completed" class="completed-label">Completed :&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                  <label class="form-check-label" for="checkbox">
-                    <input type="checkbox" class="completedture" id="completedtrue" name="true" >True
-                  </label>
-                </div>
-                <div class="form-check-inline">
-                  <label class="form-check-label">
-                    <input type="checkbox" class="completedfalse"  id="completedfalse" name="false">False
-                  </label>
-                </div>
-            </div>
-            <div class="form-group">
-              <label for="Note" id="note-label">Note :</label>
-              <textarea id="note" name="note" rows="4" cols="50" required>
-                 
-                  </textarea>
-            </div>
-            <div class="btn ">
-                <button class="button " id="add">create</button>
-           </div>
-          
+        <div class="form-group">
+          <label for="Title" id="title-label">Title :</label>
+          <input
+            type="text"
+            class="title"
+            id="title"
+            placeholder="Enter title"
+            size="70px"
+            name="title"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <div class="form-check-inline">
+            <label for="Priority" class="priority-label"
+              >Priroty :&nbsp;&nbsp;&nbsp;&nbsp;</label
+            >
+            <label class="form-check-label" for="checkbox">
+              <input
+                type="checkbox"
+                class="priorityhigh"
+                id="priorityhigh"
+                name="high"
+              />High
+            </label>
+          </div>
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input
+                type="checkbox"
+                class="prioritylow"
+                id="prioritylow"
+                name="Low"
+              />Low
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check-inline">
+            <label for="completed" class="completed-label"
+              >Completed :&nbsp;&nbsp;&nbsp;&nbsp;</label
+            >
+            <label class="form-check-label" for="checkbox">
+              <input
+                type="checkbox"
+                class="completedture"
+                id="completedtrue"
+                name="true"
+              />True
+            </label>
+          </div>
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input
+                type="checkbox"
+                class="completedfalse"
+                id="completedfalse"
+                name="false"
+              />False
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="Note" id="note-label">Note :</label>
+          <textarea id="note" name="note" rows="4" cols="50" required> </textarea>
+        </div>
+        <div class="btn">
+          <button class="button" id="addBtn">create</button>
+        </div>
       </form>
     </div>
-      <div class="container m-5">
-          <div class="row">
-              <div class="col-1">
-                  <h1>Task</h1>
-              </div>
-              <div class="col-10 description">
-                  <p>Click on table headings to sort data</p>
-              </div>
-          </div>
-          <div class="row heading">
-            <div class="col-2">
-                <h4>Title</h4>
-            </div>
-            <div class="col-1"><h4>Priority</h4></div>
-            <div class="col-2"><h4>Due</h4></div>
-            <div class="col-3">
-                <h4>Notes</h4>
-            </div>
-            <div class="col-4">
-                <h4>Completed</h4>
-            </div>
-          </div>
-
-          
-
+    <div class="container m-5">
+      <div class="row">
+        <div class="col-1">
+          <h1>Task</h1>
+        </div>
+        <div class="col-10 description">
+          <p>Click on table headings to sort data</p>
+        </div>
       </div>
-    <!-- Optional JavaScript -->
+      <div class="row heading">
+        <div class="col-2">
+          <h4>Title</h4>
+        </div>
+        <div class="col-1"><h4>Priority</h4></div>
+        <div class="col-2"><h4>Due</h4></div>
+        <div class="col-3">
+          <h4>Notes</h4>
+        </div>
+        <div class="col-4">
+          <h4>Completed</h4>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
     <script src="./index.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
